@@ -41,5 +41,5 @@ resource "google_compute_instance" "sonarqube" {
     name = "sonarqube"
   }
 
-  metadata_startup_script = "sudo yum update -y;sudo yum install git -y; sudo git clone https://github.com/iamdaaniyaal/devops.git; cd /; cd devops; sudo chmod 777 /devops/*; sudo sh sonarqube.sh;"
+  metadata_startup_script = "sudo yum update -y;sudo yum install git -y; sudo git clone https://github.com/iamdaaniyaal/sonarqube.git; cd /sonarqube; sudo chmod 777 /sonarqube/*; sudo sh sonarqube.sh;"
 }
