@@ -7,8 +7,8 @@ provider "google" {
 
 //SonarQube Instance
 resource "google_compute_address" "sonarqubeip" {
-  name   = "sonarqubeip"
-  region = "us-east1"
+  name   = "${var.sonarqube_instance_ip_name}"
+  region = "${var.sonarqube_instance_ip_region}"
 }
 
 
