@@ -13,7 +13,7 @@ resource "google_compute_address" "sonarqubeip" {
 
 
 resource "google_compute_instance" "sonarqube" {
-  name         = "sonarqube-ashok-abc"
+  name         = "${var.instance_name}"
   machine_type = "n1-standard-1"
   zone         = "us-east1-b"
 
